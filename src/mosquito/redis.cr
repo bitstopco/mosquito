@@ -32,7 +32,7 @@ module Mosquito
     end
 
     def initialize
-      if url = ENV["REDIS_URL"]?
+      if url = ENV["REDIS_URL_MOSQUITO"]?
         @connection = ::Redis.new(url: url)
       else
         @connection = ::Redis.new
